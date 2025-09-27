@@ -16,5 +16,8 @@ jobs:
       - name: Set up Docker
         uses: docker/setup-buildx-action@v3
 
+      - name: Make script executable
+        run: chmod +x script.sh
+
       - name: Run cyclic Docker script
         run: ./script.sh
