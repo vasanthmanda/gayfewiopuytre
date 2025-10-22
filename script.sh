@@ -28,4 +28,6 @@ echo "-----------------------------------"
 docker pull "$SELECTED_IMAGE"
 docker run --rm \
   -i --shm-size 4g \
+  -e MIN_SLEEP_MINUTES=1 \
+  -e MAX_SLEEP_MINUTES=2 \
   "$SELECTED_IMAGE"
